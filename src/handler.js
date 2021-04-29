@@ -11,25 +11,6 @@ const addBookHandler = (request, h) => {
   const updatedAt = insertedAt;
   const finished = Boolean(readPage === pageCount);
 
-  const newBook = {
-    id,
-    name,
-    year,
-    author,
-    summary,
-    publisher,
-    pageCount,
-    readPage,
-    reading,
-    finished,
-    insertedAt,
-    updatedAt,
-  };
-
-  books.push(newBook);
-
-  const isSuccess = books.filter((book) => book.id === id).length > 0;
-
   // No name from client
   if (!name) {
     const response = h.response({
@@ -49,6 +30,25 @@ const addBookHandler = (request, h) => {
     response.code(400);
     return response;
   }
+
+  const newBook = {
+    id,
+    name,
+    year,
+    author,
+    summary,
+    publisher,
+    pageCount,
+    readPage,
+    reading,
+    finished,
+    insertedAt,
+    updatedAt,
+  };
+
+  books.push(newBook);
+
+  const isSuccess = books.filter((book) => book.id === id).length > 0;
 
   if (isSuccess) {
     const response = h.response({
