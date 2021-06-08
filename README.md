@@ -1,18 +1,14 @@
-# Sentiment Analyst Project
+# Bookshelf-API
 
-Simple sentiment analyst project using twitter API data. Twitter Developer account is needed to get API key and others. Time range and number of tweet to analyst can be arranged based on twitter developer account type. 
+Writed as Basic Back-End App Final Project from Dicoding Indonesia. Used Hapi Framework to develop the web server.
 
 ## Features
-* Gathering tweet data based on words to be analyzed
-* Update sentiment value
-* Show tweet data table
-* Visualize sentiment value based on number of tweet
+* Save the book data
+* Show all books
+* Show the book details
+* Edit book data
+* Delete book
 
-## Used Library 
-* Tweepy
-* Re
-* Pandas
-* Matplotlib
-* Numpy
-* Datetime
-* Sqlite3
+## API testing
+Testing can be done using postman with collection and environment in the following files,
+* [Postman Bookshelf API Test Collection dan Environment](https://raw.githubusercontent.com/dicodingacademy/a261-backend-pemula-labs/099-shared-files/BookshelfAPITestCollectionAndEnvironment.zip)
